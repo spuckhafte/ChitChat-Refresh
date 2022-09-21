@@ -29,25 +29,59 @@ body {
             .ls-content {
                 display: flex;
                 flex-direction: column;
+                height: inherit;
 
                 .self-view {
                     @include flex-v($pad:8px);
+                    @include hover-shade(#1b3263);
                     font-weight: 700;
-                    font-size: large;
-                    background-color: #148b79;
+                    font-size: medium;
+                    background-color: #273f72;
+                    height: 100px;
                     color: $white;
+                    flex: 0.5;
                     img {
-                        width: 50px;
-                        height: 50px;
+                        width: 30px;
+                        height: 30px;
                         border-radius: 100%;
                         margin-right: 10px;
                     } span {
                         @include text-control($w:100px);
                     }
                 }
-                cursor: pointer;
-                :hover {
-                    background-color: #067967
+
+                .chat-community-menu {
+                    height: 100%;
+                    flex: 8;
+                }
+                .ls-controller {
+                    background-color: $blue;
+                    height: 100%;
+                    flex: 1;
+
+                    display: grid;
+                    grid-template-areas: 
+                        "chat    com"
+                        "new     new";
+                    grid-template-columns: 1fr 1.5fr;
+                    gap: 2px 2px;
+
+                    $children: ("chat": chat, "community": com, "new-process": new);
+                    
+                    @each $child, $val in $children {
+                        .#{$child} {
+                            grid-area: $val;
+                            text-align: center;
+                            background-color: $brownish;
+                            line-height: 200%;
+                            font-weight: bolder;
+                            @include hover-shade(#975e7f);
+                            @if $child == 'new-process' {
+                                background-color: $light-blue;
+                                @include hover-shade(#5f629d);
+                            }
+                        }
+                    }
                 }
             }
         };

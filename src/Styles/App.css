@@ -26,20 +26,26 @@ body {
 .main-container .main-content .left-sidebar .ls-content {
   display: flex;
   flex-direction: column;
-  cursor: pointer;
+  height: inherit;
 }
 .main-container .main-content .left-sidebar .ls-content .self-view {
   display: flex;
   align-items: center;
   padding: 8px;
+  cursor: pointer;
   font-weight: 700;
-  font-size: large;
-  background-color: #148b79;
+  font-size: medium;
+  background-color: #273f72;
+  height: 100px;
   color: #ebf5ee;
+  flex: 0.5;
+}
+.main-container .main-content .left-sidebar .ls-content .self-view:hover {
+  background-color: #1b3263;
 }
 .main-container .main-content .left-sidebar .ls-content .self-view img {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   border-radius: 100%;
   margin-right: 10px;
 }
@@ -50,8 +56,56 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.main-container .main-content .left-sidebar .ls-content :hover {
-  background-color: #067967;
+.main-container .main-content .left-sidebar .ls-content .chat-community-menu {
+  height: 100%;
+  flex: 8;
+}
+.main-container .main-content .left-sidebar .ls-content .ls-controller {
+  background-color: #14213d;
+  height: 100%;
+  flex: 1;
+  display: grid;
+  grid-template-areas: "chat    com" "new     new";
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2px 2px;
+}
+.main-container .main-content .left-sidebar .ls-content .ls-controller .chat {
+  grid-area: chat;
+  text-align: center;
+  background-color: #734760;
+  line-height: 200%;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.main-container .main-content .left-sidebar .ls-content .ls-controller .chat:hover {
+  background-color: #975e7f;
+}
+.main-container .main-content .left-sidebar .ls-content .ls-controller .community {
+  grid-area: com;
+  text-align: center;
+  background-color: #734760;
+  line-height: 200%;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.main-container .main-content .left-sidebar .ls-content .ls-controller .community:hover {
+  background-color: #975e7f;
+}
+.main-container .main-content .left-sidebar .ls-content .ls-controller .new-process {
+  grid-area: new;
+  text-align: center;
+  background-color: #734760;
+  line-height: 200%;
+  font-weight: bolder;
+  cursor: pointer;
+  background-color: #474973;
+  cursor: pointer;
+}
+.main-container .main-content .left-sidebar .ls-content .ls-controller .new-process:hover {
+  background-color: #975e7f;
+}
+.main-container .main-content .left-sidebar .ls-content .ls-controller .new-process:hover {
+  background-color: #5f629d;
 }
 .main-container .main-content .center-portion {
   width: 100%;
