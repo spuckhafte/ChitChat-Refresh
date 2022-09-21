@@ -1,0 +1,58 @@
+body {
+  background-color: #14213d;
+  color: #ebf5ee;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Nunito", sans-serif;
+}
+
+.main-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.main-container .main-content {
+  display: flex;
+  height: inherit;
+  width: inherit;
+}
+.main-container .main-content .left-sidebar {
+  height: inherit;
+  width: 250px;
+  min-width: 248px;
+  background-color: #339989;
+}
+.main-container .main-content .left-sidebar .ls-content {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.main-container .main-content .left-sidebar .ls-content .self-view {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  font-weight: 700;
+  font-size: large;
+  background-color: #148b79;
+  color: #ebf5ee;
+}
+.main-container .main-content .left-sidebar .ls-content .self-view img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+.main-container .main-content .left-sidebar .ls-content .self-view span {
+  width: 100px;
+  min-width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.main-container .main-content .left-sidebar .ls-content :hover {
+  background-color: #067967;
+}
+.main-container .main-content .center-portion {
+  width: 100%;
+}/*# sourceMappingURL=App.css.map */

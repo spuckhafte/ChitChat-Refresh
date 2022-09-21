@@ -1,0 +1,58 @@
+@import './variables';
+@import './mixins';
+
+body {
+    background-color: $blue;
+    color: $white;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Nunito', sans-serif;
+};
+
+.main-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    .main-content {
+        display: flex;
+        height: inherit;
+        width: inherit;
+
+        .left-sidebar {
+            height: inherit;
+            width: 250px;
+            min-width: 248px;
+            background-color: $green;
+
+            .ls-content {
+                display: flex;
+                flex-direction: column;
+
+                .self-view {
+                    @include flex-v($pad:8px);
+                    font-weight: 700;
+                    font-size: large;
+                    background-color: #148b79;
+                    color: $white;
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 100%;
+                        margin-right: 10px;
+                    } span {
+                        @include text-control($w:100px);
+                    }
+                }
+                cursor: pointer;
+                :hover {
+                    background-color: #067967
+                }
+            }
+        };
+        .center-portion {
+            width: 100%
+        }
+    };
+};

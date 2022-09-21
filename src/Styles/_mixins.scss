@@ -1,0 +1,23 @@
+@mixin test($type) {
+    @if $type == 'f' {
+        background-color: rgba(172, 255, 47, 0.316);
+    }
+
+    @if $type == 'b' {
+        border: 1px solid red;
+    }
+}
+
+@mixin flex-v($pad) {
+    display: flex;
+    align-items: center;
+    padding: $pad;
+};
+
+@mixin text-control($w) {
+    width: $w;
+    min-width: $w;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
