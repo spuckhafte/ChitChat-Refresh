@@ -7,10 +7,15 @@ body {
   font-family: "Nunito", sans-serif;
 }
 
+/*chat.svelte*/
 .main-container {
   position: absolute;
   height: 100%;
   width: 100%;
+  -ms-user-select: none;
+      user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 .main-container .main-content {
   display: flex;
@@ -74,38 +79,144 @@ body {
   text-align: center;
   background-color: #734760;
   line-height: 200%;
-  font-weight: bolder;
+  font-weight: 800;
   cursor: pointer;
 }
 .main-container .main-content .left-sidebar .ls-content .ls-controller .chat:hover {
-  background-color: #975e7f;
+  background-color: #9a6583;
 }
 .main-container .main-content .left-sidebar .ls-content .ls-controller .community {
   grid-area: com;
   text-align: center;
   background-color: #734760;
   line-height: 200%;
-  font-weight: bolder;
+  font-weight: 800;
   cursor: pointer;
 }
 .main-container .main-content .left-sidebar .ls-content .ls-controller .community:hover {
-  background-color: #975e7f;
+  background-color: #9a6583;
 }
 .main-container .main-content .left-sidebar .ls-content .ls-controller .new-process {
   grid-area: new;
   text-align: center;
   background-color: #734760;
   line-height: 200%;
-  font-weight: bolder;
+  font-weight: 800;
   cursor: pointer;
   background-color: #474973;
   cursor: pointer;
 }
 .main-container .main-content .left-sidebar .ls-content .ls-controller .new-process:hover {
-  background-color: #975e7f;
+  background-color: #9a6583;
 }
 .main-container .main-content .left-sidebar .ls-content .ls-controller .new-process:hover {
   background-color: #5f629d;
+}
+.main-container .main-content .left-sidebar .modal-create-new {
+  position: absolute;
+  height: 300px;
+  width: 248px;
+  left: 5px;
+  background-color: #f5d0e5;
+  color: #14213d;
+  bottom: 4.5rem;
+  box-shadow: 0px 0px 5px 0.5px #e3c3d8;
+  border-radius: 10px;
+}
+.main-container .main-content .left-sidebar .modal-create-new ::-webkit-scrollbar {
+  width: 4px;
+}
+.main-container .main-content .left-sidebar .modal-create-new ::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+.main-container .main-content .left-sidebar .modal-create-new ::-webkit-scrollbar-thumb {
+  background: rgba(38, 61, 107, 0.7058823529);
+}
+.main-container .main-content .left-sidebar .modal-create-new ::-webkit-scrollbar-thumb:hover {
+  background: rgba(25, 40, 69, 0.7058823529);
+}
+.main-container .main-content .left-sidebar .modal-create-new .title {
+  font-weight: 1000;
+  text-transform: uppercase;
+  margin: 0.5rem;
+}
+.main-container .main-content .left-sidebar .modal-create-new .user-list {
+  margin: 0.5rem;
+  -webkit-margin-start: 0.8rem;
+          margin-inline-start: 0.8rem;
+  height: 220px;
+  font-weight: 600;
+  overflow-y: auto;
+}
+.main-container .main-content .left-sidebar .modal-create-new .user-list .show-user {
+  padding-left: 0.2rem;
+  height: 30px;
+  line-height: 190%;
+  cursor: pointer;
+  border-bottom: 1px solid #474973;
+  display: flex;
+}
+.main-container .main-content .left-sidebar .modal-create-new .user-list .show-user:hover {
+  background-color: rgba(54, 56, 61, 0.1960784314);
+}
+.main-container .main-content .left-sidebar .modal-create-new .user-list .show-user img {
+  height: 20px;
+  border-radius: 100%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 5px;
+}
+.main-container .main-content .left-sidebar .modal-create-new .user-list .show-user .user-name {
+  width: 170px;
+}
+.main-container .main-content .left-sidebar .modal-create-new .new-friend-btn {
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #14213d;
+  color: #ebf5ee;
+  border: none;
+  height: 25px;
+  font-weight: 800;
+  font-size: small;
+  cursor: pointer;
+}
+.main-container .main-content .left-sidebar .modal-create-new .new-friend-btn:hover {
+  background-color: #02163d;
+}
+.main-container .main-content .left-sidebar .modal-create-new .add-friend {
+  width: 200px;
+  position: relative;
+  bottom: 25.05px;
+  height: 25px;
+  left: 235px;
+  display: flex;
+}
+.main-container .main-content .left-sidebar .modal-create-new .add-friend input {
+  flex: 6;
+  width: 100%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  outline: none;
+  border: none;
+  background-color: #9fcdc6;
+}
+.main-container .main-content .left-sidebar .modal-create-new .add-friend button {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #010e2b;
+  cursor: pointer;
+  border: none;
+  font-size: larger;
+}
+.main-container .main-content .left-sidebar .modal-create-new .add-friend button:hover {
+  background-color: #cfe0ff;
 }
 .main-container .main-content .center-portion {
   width: 100%;

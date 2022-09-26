@@ -10,10 +10,12 @@ body {
     font-family: 'Nunito', sans-serif;
 };
 
+/*chat.svelte*/
 .main-container {
     position: absolute;
     height: 100%;
     width: 100%;
+    @include no-select;
 
     .main-content {
         display: flex;
@@ -74,13 +76,99 @@ body {
                             text-align: center;
                             background-color: $brownish;
                             line-height: 200%;
-                            font-weight: bolder;
-                            @include hover-shade(#975e7f);
+                            font-weight: 800;
+                            @include hover-shade(#9a6583);
                             @if $child == 'new-process' {
                                 background-color: $light-blue;
                                 @include hover-shade(#5f629d);
                             }
                         }
+                    }
+                }
+            }
+
+            .modal-create-new {
+                position: absolute;
+                height: 300px;
+                width: 248px;
+                left: 5px;
+                background-color: #f5d0e5;
+                color: $blue;
+                bottom: 4.5rem;
+                @include glow(#e3c3d8);
+                border-radius: 10px;
+                @include scrollbar(#ffffff, #263d6bb4, 4px);
+
+                .title {
+                    font-weight: 1000;
+                    text-transform: uppercase;
+                    margin: 0.5rem;
+                }
+
+                .user-list {
+                    margin: 0.5rem;
+                    margin-inline-start: 0.8rem;
+                    height: 220px;
+                    font-weight: 600;
+                    overflow-y: auto;
+
+                    .show-user {
+                        padding-left: 0.2rem;
+                        height: 30px;
+                        line-height: 190%;
+                        @include hover-shade($c: #36383d32);
+                        border-bottom: 1px solid $light-blue;
+
+                        display: flex;
+                        img {
+                            height: 20px;
+                            border-radius: 100%;
+                            @include r-vc;
+                            margin-right: 5px;
+                        };
+                        .user-name {
+                            width: 170px;
+                        }
+                    }
+                }
+
+                .new-friend-btn {
+                    width: 90%;
+                    @include r-hc;
+                    background-color: $blue;
+                    color: $white;
+                    border: none;
+                    height: 25px;
+                    font-weight: 800;
+                    font-size: small;
+                    @include hover-shade(#02163d)
+                }
+
+                .add-friend {
+                    width: 200px;
+                    position: relative;
+                    bottom: 25.05px;
+                    height: 25px;
+                    left: 235px;
+                    display: flex;
+
+                    input {
+                        flex: 6;
+                        width: 100%;
+                        @include r-vc;
+                        outline: none;
+                        border: none;
+                        background-color: #9fcdc6;
+                    }
+
+                    button {
+                        flex: 1;
+                        width: 100%;
+                        @include r-vc;
+                        background-color: #010e2b;
+                        @include hover-shade(#cfe0ff);
+                        border: none;
+                        font-size: larger;
                     }
                 }
             }
@@ -90,3 +178,5 @@ body {
         }
     };
 };
+
+
